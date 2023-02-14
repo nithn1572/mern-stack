@@ -9,7 +9,7 @@ app.get("/resume", function(req, res){
 	// res.send("I Am Nithin");
 	res.sendFile(__dirname+"/resume.html")
 });
-app.use(express.static(__dirname+'/public'));
+app.use(express.static(__dirname+'/style_resume.css'));
 app.listen(port, function(){
 	console.log("Server running on http://localhost:"+port);
 	console.log(`Server running on http://localhost:${port}`);
