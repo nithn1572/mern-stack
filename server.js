@@ -10,7 +10,7 @@ app.get("/resume", function(req, res){
 	// res.send("I Am Nithin");
 	res.sendFile(__dirname+"/resume.html")
 });
-app.use(express.static(path.join(__dirname+'MERN-STACK')));
+app.use(express.static(path.join(__dirname+'public')));
 
 app.listen(port, function(){
 	console.log("Server running on http://localhost:"+port);
