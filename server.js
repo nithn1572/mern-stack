@@ -8,6 +8,9 @@ app.get("/", function(req, res){
 app.get("/resume", function(req, res){
 	res.sendFile(__dirname+"/resume.html")
 });
+app.get("/card",function(req,res){
+	res.sendFile(__dirname+"/card.html")
+})
 app.use(express.static("public"));
 
 app.listen(port, function(){
