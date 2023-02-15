@@ -9,3 +9,6 @@ body{
 .content hr{
     color: black;
 }
+html{
+    scroll-behavior: smooth;
+}
