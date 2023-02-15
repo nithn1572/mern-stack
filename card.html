@@ -25,7 +25,7 @@
             float: left;
             width: 45%;
             border-radius: 9px;
-            /* perspective:1000px; */
+            perspective:1000px;
             transition: 1s;
             text-align: center;
             transform-style: preserve-3d;
@@ -34,8 +34,10 @@
             transform: rotateY(180deg);
         }
         .flip-card-front,.flip-card-back{
-
             backface-visibility: hidden;
+        }
+        .flip-card-back{
+            transform: rotateY(180deg);
         }
         .card2{
             background-color: red;
@@ -58,7 +60,7 @@
                 <h3 style="float:right ;">NAME1</h3>
             </div>
             <div class="flip-card-back">
-                <p>this is back side </p>
+                <p>CONTACT : </p>
             </div>
         </div>
         <div class="card2">
