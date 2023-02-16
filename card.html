@@ -123,9 +123,41 @@
             </div>
         </div>
         <div class="card2">
-            <img src="empty_pp.jpg" alt="Profile Pic" width="200px" height="150px " style=" border-radius: 9px;margin-left:80px">
-            <h3>ANNAPU REDDY ARAVIND REDDY</h3>
+            <img id="userimage" class="userphoto" src="empty_pp.jpg" alt="Profile Pic" width="200px" height="150px " style=" border-radius: 9px;margin-left:80px">
+            <h3 id="username" class="username">ANNAPU REDDY ARAVIND REDDY</h3>
         </div>
+        <button onclick="toggleuser()">click</button>
     </div>
+    <script>
+        const user1 = {
+            name : "ANNAPU REDDY ARAVIND REDDY",
+            image : "/empty_pp.jpg"
+        }
+        const user2 = {
+            name : "ANNAPU REDDY NITHIN KUMAR REDDY",
+            image : "/ADV_algo.png"
+        }
+        let currentIsNithin = true ;
+        let currentuser =  user1;
+
+        let usertitle = document.getElementById("username");
+        let userimage = document.getElementById("userimage");
+
+        let toggleuser = function(){
+            if(currentIsNithin){
+                currentuser = user2;
+                currentIsNithin =false;
+            }
+            else{
+                currentuser = user1;
+                currentIsNithin = true;
+            }
+            
+            usertitle.innerHTML = currentuser.name;
+            userimage.src = currentuser.image
+        }
+
+
+    </script>
 </body>
 </html>
