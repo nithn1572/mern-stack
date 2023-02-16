@@ -20,9 +20,10 @@ app.get("/resume", function(req, res){
 app.get("/card", function(req, res){
 	res.sendFile(__dirname+"/card.html");
 });
-app.get("/neetcode", function(req, res){
-	res.sendFile(__dirname+"/nodecode.html");
+app.get("/NeetCode", function(req, res){
+	res.sendFile(__dirname+"/NeetCode.html");
 });
+
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function (err){
 	if(err){
