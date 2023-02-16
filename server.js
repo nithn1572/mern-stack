@@ -20,6 +20,9 @@ app.get("/resume", function(req, res){
 app.get("/card", function(req, res){
 	res.sendFile(__dirname+"/card.html");
 });
+app.get("/neetcode", function(req, res){
+	res.sendFile(__dirname+"/nodecode.html");
+});
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function (err){
 	if(err){
@@ -76,7 +79,7 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function (err){
 		// 		console.log(result);
 		// 	}
 		// });
-        
+
 
 		app.listen(port, function(){
 			console.log("Server running on http://localhost:"+port);
