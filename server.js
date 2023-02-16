@@ -23,19 +23,27 @@ mongoose.connect(process.env.MONGO_CONNECTION_STRING, {}, function(err) {
         console.error(err);
     } else {
         console.log('Connected to database');
-        userLib.getAllUsers(function(err, usersList) {
-            if (err) {
+        // userLib.getAllUsers(function(err, usersList) {
+        //     if (err) {
+        //         console.error(err);
+        //     } else {
+        //         if (usersList.length === 0) {
+        //             userLib.createFirstUser(function(err, res) {
+        //                 if (err) {
+        //                     console.error(err);
+        //                 } else {
+        //                     console.log(res);
+        //                 }
+        //             });
+        //         }
+        //     }
+        // });
+        userLib.updateUser(function(err,result){
+            if(err){
                 console.error(err);
-            } else {
-                if (usersList.length === 0) {
-                    userLib.createFirstUser(function(err, res) {
-                        if (err) {
-                            console.error(err);
-                        } else {
-                            console.log(res);
-                        }
-                    });
-                }
+            }
+            else{
+                console.log(result);
             }
         });
         app.listen(port, function() {

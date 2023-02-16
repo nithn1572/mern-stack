@@ -22,3 +22,19 @@ module.exports.createFirstUser = async function(callback) {
         callback(err, null);
     }
 }
+
+module.exports.updateUser = async function(callback){
+    try{
+        var query = {
+            userName : "nithin1572",
+        };
+        var data = {
+            yearOfGraduation : 2030,
+        };
+        var result = await userModel.updateOne(query,data);
+        callback(null,result);
+    }
+    catch(err){
+        callback(err,null);
+    }
+}
