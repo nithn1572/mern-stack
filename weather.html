@@ -45,7 +45,7 @@
                 <img id="cardImage" src="images/clear.jpg" class="card-img-top" alt="Weather-Img">
                 <div class="card-body">
                     <h6 id="temp" class="display-4 font-weight-bold text-center">13°C</h6>
-                    <h6 id="feelLike" class="display-6 font-weight-bold text-center">(Feels Like 13C)</h6>
+                    <h6 id="feelLike" class="display-6 font-weight-bold text-center">(Feels Like 13°C)</h6>
                     <h6 id="weather" class="display-7 text-center">Haze</h6>
                     <h5 id="minMaxTemp" class="text-center">25°C (min)/ 26°C(max)</h5>
                 </div>
@@ -115,7 +115,7 @@
             }
             function showWeatherReport(currentWeather){
                 let city = document.getElementById("city");
-                let currentDate = document.getElementById("date");
+                let currentDate = document.getElementById("currentDate");
                 let cardImage = document.getElementById("cardImage");
                 let temp = document.getElementById("temp");
                 let feelLike = document.getElementById("feelLike");
@@ -131,7 +131,7 @@
                 
                 cardImage.src = manageImage(currentWeather.weather[0].main)
                 // console.log(currentWeather.weather[0].main)
-                temp.innerHTML = `${Math.round(currentWeather.main.temp)} C `
+                temp.innerHTML = `${Math.round(currentWeather.main.temp)} °C `
                 feelLike.innerHTML = `(Feels Like ${Math.round(currentWeather.main.feels_like)} °C)`
                 weather.innerHTML = currentWeather.weather[0].main;
                 minMaxTemp.innerHTML =` ${Math.floor(currentWeather.main.temp_min)}°C / ${Math.ceil(currentWeather.main.temp_max)}°C `
@@ -141,8 +141,8 @@
                 visibility.innerHTML = `<span>visibility </span> ${currentWeather.visibility}` 
                 wind.innerHTML = `<span>wind </span> ${currentWeather.wind.speed}` 
                 // console.log(currentWeather);
-                // let todayDate = new Date().toDateString();
-                // currentDate.innerHTML = hyderabad ;
+                let todayDate = new Date().toDateString();
+                currentDate.innerHTML = todayDate;
             }
             function manageImage(weatherType) {
                 if (weatherType === 'Clear') {
