@@ -44,10 +44,10 @@
                 </div>
                 <img id="cardImage" src="images/clear.jpg" class="card-img-top" alt="Weather-Img">
                 <div class="card-body">
-                    <h6 id="temp" class="display-4 font-weight-bold text-center">13 C</h6>
+                    <h6 id="temp" class="display-4 font-weight-bold text-center">13°C</h6>
                     <h6 id="feelLike" class="display-6 font-weight-bold text-center">(Feels Like 13C)</h6>
                     <h6 id="weather" class="display-7 text-center">Haze</h6>
-                    <h5 id="minMaxTemp" class="text-center">25 C (min)/ 26 C(max)</h5>
+                    <h5 id="minMaxTemp" class="text-center">25°C (min)/ 26°C(max)</h5>
                 </div>
                 <div class="accordion" id="accordionExample">
                     <div class="accordion-item">
@@ -134,7 +134,7 @@
                 temp.innerHTML = `${Math.round(currentWeather.main.temp)} C `
                 feelLike.innerHTML = `(Feels Like ${Math.round(currentWeather.main.feels_like)} C)`
                 weather.innerHTML = currentWeather.weather[0].main;
-                minMaxTemp.innerHTML =` ${Math.floor(currentWeather.main.temp_min)}C / ${Math.ceil(currentWeather.main.temp_max)}C `
+                minMaxTemp.innerHTML =` ${Math.floor(currentWeather.main.temp_min)}°C / ${Math.ceil(currentWeather.main.temp_max)}°C `
                 
                 humidity.innerHTML = `<span>humidity </span> ${currentWeather.main.humidity}` 
                 pressure.innerHTML = `<span>pressure </span> ${currentWeather.main.pressure}` 
