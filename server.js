@@ -12,6 +12,9 @@ app.use(express.static("public",options));
 app.get("/", function(req, res){
 	res.sendFile(__dirname+"/index.html");
 });
+app.get("/weather", function(req, res){
+	res.sendFile(__dirname+"/weather.html");
+});
 
 app.get("/resume", function(req, res){
 	res.sendFile(__dirname+"/resume.html");
