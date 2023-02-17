@@ -132,7 +132,7 @@
                 cardImage.src = manageImage(currentWeather.weather[0].main)
                 // console.log(currentWeather.weather[0].main)
                 temp.innerHTML = `${Math.round(currentWeather.main.temp)} C `
-                feelLike.innerHTML = `(Feels Like ${Math.round(currentWeather.main.feels_like)} C)`
+                feelLike.innerHTML = `(Feels Like ${Math.round(currentWeather.main.feels_like)} °C)`
                 weather.innerHTML = currentWeather.weather[0].main;
                 minMaxTemp.innerHTML =` ${Math.floor(currentWeather.main.temp_min)}°C / ${Math.ceil(currentWeather.main.temp_max)}°C `
                 
