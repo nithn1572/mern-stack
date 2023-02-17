@@ -1,5 +1,5 @@
 const userModel = require("../models/userModel");
-
+ 
 module.exports.getAllUsers = async function(callback){
     try{
         var users = await userModel.find({isDeleted: false});
