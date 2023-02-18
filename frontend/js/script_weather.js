@@ -93,3 +93,14 @@ function manageImage(weatherType) {
         return "images/clear.jpg"
     }
 }
+
+var light = true;
+function setTheme(){
+    if(light){
+        document.documentElement.setAttribute("data-bs-theme","dark");
+    }
+    else{
+        document.documentElement.setAttribute("data-bs-theme","light");
+    }
+    light = !light 
+}
