@@ -1,0 +1,30 @@
+body{
+    background-color:white;
+}
+.content{
+    margin-left: 250px;
+    margin-right: 250px;
+}
+.content hr{
+    color: black;
+}
+html{
+    scroll-behavior: smooth;
+}
+.linkedinclass{
+    color: blue;
+    font-size: 200%;
+}
+.gmailclass{
+    font-size:36px; 
+    color: rgb(236, 113, 113); 
+    padding-right: 2%;
+}
+.githubclass{
+    font-size:36px;
+    padding-left:2%;
+    color: black;
+}
+.linkedinclass:hover,.gmailclass:hover,.githubclass:hover{
+    color: green;
+}
