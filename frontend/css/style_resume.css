@@ -17,6 +17,10 @@ body{
     margin-bottom: 20px;
     color: green;
 }
+#rolesid{
+    margin-left: 18%;
+    color: green;
+}
 .callandlocation{
     display: flex;
     flex-direction: row;
@@ -92,5 +96,14 @@ body{
 }
 /* time line css ............................. end.................... */
 .skillssection{
+    padding-left: 3%;
+}
+.projects{
+    padding-left: 3%;
+}
+.achievementssection{
+    padding-left: 3%;
+}
+.certifiationssection{
     padding-left: 3%;
 }
