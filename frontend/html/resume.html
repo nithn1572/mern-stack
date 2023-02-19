@@ -5,87 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
-    <link rel="stylesheet" href="/css/style_resume.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/css/bootstrap.min.css" integrity="sha512-72OVeAaPeV8n3BdZj7hOkaPSEk/uwpDkaGyP4W2jSzAC8tfiO4LMEDWoL3uFp5mcZu+8Eehb4GhZWFwvrss69Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style_resume.css">
 </head>
 <body>
-    <div class="content">
-        <h1 style="margin-left: 219px;position:relative ; color: green;">NITHIN KUMAR REDDY ANNAPU REDDY</h1>
-        <p style="margin-left: 344px;position:relative">
-            <i class="material-icons" style="color:blue; padding-right:0% ;">call</i> 9701195028 
-            <i class="material-icons" style="color:rgb(243, 60, 60); padding-right:0% ;padding-left: 13%;">beenhere</i>HYDERABAD,TELANAGANA
-        </p>
-        <p style="margin-left: 324px;position:relative">
-            <a class="gmailclass" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCKCBkQstMgwSRCFsDqqmgHKhJNdpQrvrQxzPxWBBGWhnRLDvCtGnmwnmkdlcWsvqldKkLdV" target="_blank">
-                <i class="fa fa-envelope" ></i>
-            </a>
-            <a href="https://www.linkedin.com/in/nithin1572/" target="_blank" class="linkedinclass">
-                <i class="fa fa-linkedin-square" ></i>
-            </a>    
-            <a class="githubclass" href="https://github.com/nithn1572" target="_blank">
-                <i class="fa fa-github"></i>
-            </a>         
-
-        </p>
-        <hr>
-        <h2>EDUCATION</h2>
-        <b style="font-size: 18px;position: relative;">Bachelor of Computer Science</b>
-        <p>CMR College Of Engineering Technology </p>
-        <b style="font-size: 18px;position: relative;">Intermediate (MPC)</b>
-        <p>Sri Chaitanya Junior College </p>
-        <b style="font-size: 18px;position: relative;">Secondary Schooling(State Board)</b>
-        <p>Sri Chaitanya Techno School </p>
-        <hr >
-        <h2>SKILLS</h2>
-        <b>TECHNICAL SKILLS : </b>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JAVA SCRIPT </li>
-        </ul>
-        <hr >
-        <h2>PROJECTS</h2>
-        <b>CAR PRICE PREDICTION :</b>
-        <ul style="font-size: 18px;">
-            <li>
-                Developed a Machine learning Project and used data visualization techniques to understand how features effect
-                in pricing of a <br>car and estimate the price of a car based on its features(10+).
-            </li>
-            <li>
-                Implemented various algorithms and used real-world data to train and evaluate the model with a improved R2
-                score upto 92
-            </li>
-            <li>
-                Organized the project which resulted in a successful demonstration features effecting in pricing of a car, highlighting the 
-                <br>potential of machine learning to solve complex problems and achieved hands-on experience with 3
-                machine learning techniques <br>and data visualization, further strengthening skills in these areas
-            </li>
-        </ul>
-        <hr>
-        <h2>ACCOMPLISHMENTS</h2>
-        <ul>
-            <li>Won 1st prize in Coding Premier League conducted by CMRCET.</li>
-            <li>Won 3rd prize in Illuminati Coding Contest conducted by CMRIT.</li>
-            <li>Ranked 6th in round-3 of TURING CUP conducted by VNRVJIT.</li>
-            <li>Solved 300+ problems on CODECHEF</li>
-            <li>Solved 300+ problems on CODEFORCES</li>
-        </ul>
-        <hr>
-        <h2>CERTIFICATIONS </h2>
-        <ul>
-            <li>Foundations : Data, Data,Everywhere Course at Coursera authorized by Google.(Oct-10-2022)</li>
-            <li>Python for Data Science,AI & Devolepment Course at Coursera authorized by IBM.(July-8-2022)</li>
-            <li>Python Data Science with Pandas: Master 12 Advanced Projects Course at Udemy</li>
-        </ul>
-        <hr>
-        <h2>EXTRA CURRICULAR ACTIVITIES</h2>
-        <ul>
-            <li>Cricket</li>
-            <li>E-Sports</li>
-        </ul>
+    <div class="containerheader mt-5 ">
+        <div class="header mt-3 mb-3">
+            <h1 id="mainname">NITHIN KUMAR REDDY ANNAPU REDDY</h1>
+            <div class="callandlocation mt-2">
+                <p><b><i class="fa fa-phone" style="font-size: 20px;color: rgb(119, 119, 250);"></i> 9701195028</b></p>
+                <p style="margin-left: 60px;"><b><i class="fa fa-map-marker" style="font-size: 20px;color: rgb(249, 61, 61);"></i> Hyderabad,Telangana</b></p>
+            </div>
+            <div class="socials">
+                <form id="linkedinicon" action="https://www.linkedin.com/in/nithin1572/" target="_blank"><i class="fa-brands fa-linkedin"></i></form>
+                <b>&nbsp; LinkedIn</b>
+                <form id="githubicon" action="https://github.com/nithn1572" target="_blank"><i class="fa-brands fa-github"></i></form>
+                <b>&nbsp; GitHub</b>
+                <form id="mailicon" action="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJlDSkzsvhfSpcjwHVTmQQLJTcWFgvBbMnPGDwwFzBWZwvXWlvZcjlDtBRBLXNHPDWFZsFg" target="_blank"><i class="fa-solid fa-envelope"></i></form>
+                <b>&nbsp; Mail</b>
+            </div>
+        </div>
     </div>
+    <div class="middleportion">
+        <div class="education">
+            <b style="font-size: 20px;padding-left: 10px;">EDUCATION : </b>
+            <ol>
+                <br>
+                <li>
+                    <b style="font-size: 18px;position: relative;">Bachelor of Computer Science</b>
+                    <p>CMR College Of Engineering Technology - <b>(2020 - 2024)</b> </p>
+                </li>
+                <li>
+                    <b style="font-size: 18px;position: relative;">Intermediate (MPC)</b>
+                    <p>Sri Chaitanya Junior College - <b>(2018 - 2020)</b></p>
+                </li>
+                <li>
+                    <b style="font-size: 18px;position: relative;">Secondary Schooling(State Board)</b>
+                    <p>Sri Chaitanya Junior Techno School - <b>( 2018)</b></p>
+                </li>
+            </ol>
+        </div>
+        <hr style="margin-left: 2%;margin-right: 2%;color: black;">
+        <b style="font-size: 20px;padding-left: 10px;">SKILLS : </b>
+        <div class="skillssection">
+            <ul>
+                <li><p> <b>Languages: </b> C/C++, Python, HTML, CSS, JavaScript</p></li>
+                <li><p> <b>Technologies: </b> Bootstrap, ReactJs, NodeJs, Django</p></li>
+                <li><p> <b>Database: </b> MySQL, MongoDB</p></li>
+                <li><p> <b>Tools: </b>VS Code, Jupyter Notebook</p></li>
+            </ul>
+        </div>
+        <hr style="margin-left: 2%;margin-right: 2%;color: black;">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/js/all.min.js" integrity="sha512-2bMhOkE/ACz21dJT8zBOMgMecNxx0d37NND803ExktKiKdSzdwn+L7i9fdccw/3V06gM/DBWKbYmQvKMdAA9Nw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0-alpha1/js/bootstrap.min.js" integrity="sha512-eHx4nbBTkIr2i0m9SANm/cczPESd0DUEcfl84JpIuutE6oDxPhXvskMR08Wmvmfx5wUpVjlWdi82G5YLvqqJdA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/js/script_resume.js"></script>
 </body>
 </html>
