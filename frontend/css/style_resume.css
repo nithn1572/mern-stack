@@ -1,7 +1,10 @@
 body{
     background-color: rgb(236, 234, 234);
+    /* background-color: red; */
+    border-radius: 9px;
 }
 .containerheader{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.537);
     padding-left: 1%;
     padding-right: 1%;
     background-color: rgb(251, 216, 150);
@@ -58,6 +61,7 @@ body{
 /* --------------------------------------------------------------------------------------------- */
 
 .middleportion{
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.537);
     padding-top: 1%;
     padding-left: 1%;
     background-color: rgb(243, 228, 209);
@@ -99,6 +103,7 @@ body{
     padding-left: 3%;
 }
 .projects{
+    /* box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.537); */
     padding-left: 3%;
 }
 .achievementssection{
