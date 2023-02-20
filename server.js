@@ -35,8 +35,8 @@ app.get("/card", function(req, res){
 	res.sendFile(__dirname+"/frontend/html/card.html");
 });
 
-app.get("/NeetCode", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/NeetCode.html");
+app.get("/CodeTrack", function(req, res){
+	res.sendFile(__dirname+"/frontend/html/CodeTrack.html");
 });
 
 app.get("/todo", function(req, res){
