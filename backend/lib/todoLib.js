@@ -1,4 +1,5 @@
 const todoModel = require("../models/todoModel");
+
 /*
 1. createTodo
 2. getAllTodos
@@ -7,19 +8,7 @@ const todoModel = require("../models/todoModel");
 5. updateTodoById
 6. DeleteTodoById
 */
-module.exports.createFirstTodo = async function(callback){
-    try{
-        var todo = {
-            title: "first todo",
-        };
-        var newTodo = new todoModel(todo);
-        var result = await newTodo.save();
-        callback(null,result);
-    }
-    catch(err){
-        callback(err,null);
-    }
-}
+
 module.exports.createTodo = async function(todo,callback){
     try{
         var newTodo = new todoModel(todo);
@@ -32,17 +21,27 @@ module.exports.createTodo = async function(todo,callback){
 }
 module.exports.getAllTodos = async function(callback){
     try{
-        var todos = await todoModel.find({isDeleted:false, isCompleted:false});
+        var todos = await todoModel.find({isCompleted: false,isDeleted: false});
         callback(null,todos);
     }
     catch(err){
-        callback(err,null)
+        callback(err,null);
     }
 }
 
-module.exports.getTodoByQuery = async function(query,callback){
+module.exports.getTodosByQuery = async function(query,callback){
     try{
-        var todo = await todoModel.find(query);
+        var todos = await todoModel.find(query);
+        callback(null,todos);
+    }
+    catch(err){
+        callback(err,null);
+    }
+}
+
+module.exports.getSingleTodoById = async function(id,callback){
+    try{
+        var todo = await todoModel.findOne(id);
         callback(null,todo);
     }
     catch(err){
@@ -50,38 +49,28 @@ module.exports.getTodoByQuery = async function(query,callback){
     }
 }
 
-module.exports.deleteTodo = async function(id,callback){
+module.exports.updateTodoById = async function(id,data,callback){
     try{
-        var query = {
+        var todo = {
             _id: id,
         };
-        var result = await todoModel.updateOne(query,{isDeleted: true});
+        var result = await todoModel.updateOne(todo,data);
         callback(null,result);
     }
     catch(err){
         callback(err,null);
     }
 }
-// module.exports.getTodoById = async function(id,callback){
-//     try{
-//         var todo = todoModel.find(id);
-//         callback(null,todo)
-//     }
-//     catch(err){
-//         callback(err,null)
-//     }
-// }
-// module.exports.updateTodoById = async function(id,data,callback){
-//     try{
-//         var todo = {
-//             _id : id,
-//         };
-//         var result = await todoModel.updateOne(todo,data);
-//         callback(null,result);
-//     }
-//     catch(err){
-//         callback(err,null)
-//     }
-// }
 
-
+module.exports.deleteTodoById = async function(id,callback){
+    try{
+        var todo = {
+            _id: id,
+        };
+        var result = await todoModel.updateOne(todo,{isDeleted: true});
+        callback(null,result);
+    }
+    catch(err){
+        callback(err,null);
+    }
+}
