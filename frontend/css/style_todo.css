@@ -3,12 +3,15 @@
     justify-content: space-between;
     align-items: center;
 }
+
 .main-container {
     width: 50vw;
 }
+
 .crossed {
     text-decoration: line-through;
 }
+
 @media (max-width: 700px) {
     .main-container {
         width: 90vw;

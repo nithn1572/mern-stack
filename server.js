@@ -38,7 +38,30 @@ app.post("/api/todos", function(req, res){
 	});
 });
 
+app.put(("/api/todos/:todoid"),function(req,res){
+	const todo = req.body;
+	const todoid = req.params.todoid;
+	todoLib.updateTodoById(todoid, todo, function(err, dbtodo){
+		if(err){
+			res.json({status: "error", message: err, data: null});
+		}
+		else{
+			res.json({status: "success", data: dbtodo});
+		}
+	});
+});
 
+app.delete(("/api/todos/:todoid"),function(req,res){
+	const todoid = req.params.todoid;
+	todoLib.deleteTodoById(todoid, function(err,dbtodo){
+		if(err){
+			res.json({status: "error", message: err, data: null});
+		}
+		else{
+			res.json({status: "success", data: dbtodo});
+		}
+	});
+});
 
 app.get("/", function(req, res){
 	res.sendFile(__dirname+"/frontend/html/index.html");
@@ -48,14 +71,18 @@ app.get("/resume", function(req, res){
 	res.sendFile(__dirname+"/frontend/html/resume.html");
 });
 
+app.get("/CodeTrack", function(req, res){
+	res.sendFile(__dirname+"/frontend/html/CodeTrack.html");
+});
+
 app.get("/card", function(req, res){
 	res.sendFile(__dirname+"/frontend/html/card.html");
 });
 app.get("/weather", function(req, res){
 	res.sendFile(__dirname+"/frontend/html/weather.html");
 });
-app.get("/todolist", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/todolist.html");
+app.get("/todo", function(req, res){
+	res.sendFile(__dirname+"/frontend/html/todo.html");
 });
 app.get("/about", function(req, res){
 	res.sendFile(__dirname+"/frontend/html/about.html");

@@ -1,3 +1,4 @@
+const { default: mongoose } = require("mongoose");
 const todoModel = require("../models/todoModel");
 
 /*
@@ -52,7 +53,7 @@ module.exports.getSingleTodoById = async function(id,callback){
 module.exports.updateTodoById = async function(id,data,callback){
     try{
         var todo = {
-            _id: id,
+            _id: new mongoose.Types.ObjectId(id),
         };
         var result = await todoModel.updateOne(todo,data);
         callback(null,result);
