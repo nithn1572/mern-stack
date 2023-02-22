@@ -84,9 +84,6 @@ app.get("/weather", function(req, res){
 app.get("/todo", function(req, res){
 	res.sendFile(__dirname+"/frontend/html/todo.html");
 });
-app.get("/about", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/about.html");
-});
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function (err){
 	if(err){

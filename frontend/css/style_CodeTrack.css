@@ -2,6 +2,7 @@
     background-color: grey;
     display: flex;
     flex-direction: row;
+    justify-content:space-between;
     padding: 1%;
 }
 .leftnavbar{
@@ -10,18 +11,15 @@
 }
 #navbarlogo{
     font-size: 36px;
-    margin-left:20px;
+    margin-left:20%;
     text-decoration: none;   
     color: red;
 }
 .navbarbutton{
     color: white;
     text-decoration: none;
-    border-radius: 30px;
-    padding-top: 9%;
-    padding-left: 8%;
-    padding-right: 10%;
-    margin-left: 35%;
+    margin-left: 40%;
+    padding-top: 4%;
 }
 .navbarbutton:hover{
     color: grey;
@@ -29,9 +27,23 @@
 }
 #signupid{
     background-color: blue;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-left: 420%;
+    color: white;
     border: none;
+    padding-left: 4%;
+    padding-right: 4%;
+    font-size: 18px;
     border-radius: 20px;
+}
+.bodyclass{
+    background-color: rgb(188, 187, 187);
+}
+.quotesclass{
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-style:italic;
 }
