@@ -12,7 +12,7 @@ import {todoModel} from "../models/todoModel.js";
 6. DeleteTodoById
 */
 
-export const createTodo = async function(todo,callback){
+export async function createTodo(todo,callback){
     try{
         var newTodo = new todoModel(todo);
         var result = await newTodo.save();
@@ -22,7 +22,7 @@ export const createTodo = async function(todo,callback){
         callback(err,null);
     }
 }
-export const getCompletedTodos = async function(callback){
+export const getAllTodos = async function(callback){
     try{
         var todos = await todoModel.find({isCompleted: false,isDeleted: false});
         callback(null,todos);
@@ -31,9 +31,19 @@ export const getCompletedTodos = async function(callback){
         callback(err,null);
     }
 }
-export const getAllTodos = async function(callback){
+export const getAllCompletedTodos = async function(callback){
     try{
-        var todos = await todoModel.find({isCompleted: false,isDeleted: false});
+        var todos = await todoModel.find({isCompleted: true,isDeleted: false});
+        callback(null,todos);
+    }
+    catch(err){
+        callback(err,null);
+    }
+}
+
+export const getAllDeletedTodos = async function(callback){
+    try{
+        var todos = await todoModel.find({isDeleted: true});
         callback(null,todos);
     }
     catch(err){
