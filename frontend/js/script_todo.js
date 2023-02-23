@@ -9,11 +9,60 @@ inputBox.addEventListener("keydown", function(event){
     }
 });
 
+function midway(){
+    const inputBox = document.getElementById("inputBox");
+    createTodo(inputBox.value);
+}
+
 async function createTodo(text){
     // if text is null or undefined use inputBox.value
     await fetch("/api/todos", {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify({title: text})});
     await getAllTodos();
 }
+
+async function deleteTodo(id){
+    await fetch("/api/todos/" + id,{method : "DELETE", headers : {"Content-Type" : "application/json"}, body : JSON.stringify({isDeleted : true})});
+    await getAllDeletedTodos();
+}
+
+async function setChecked(id){
+    await fetch("/api/todos/" + id,{method : "PUT", headers : {"Content-Type" : "application/json"}, body : JSON.stringify({isCompleted : true})});
+    await getAllCompletedTodos();
+}
+
+// async function getAllCompletedTodos(){
+//     const todoresult = await fetch("/api/todos");
+//     const todos = await todoresult.json();
+//     const todoList = document.getElementById("todoList");
+//         todoList.innerHTML = null
+//         console.log(todos);
+//         todoCount = todos.data.length;
+//         document.getElementById("todoCount").innerHTML = todoCount
+//         todos.data.forEach((el, index) => {
+            
+//             let listItem = document.createElement("li");
+//             let labelItem = document.createElement("label");
+            
+//             // * CREATING THE TEXT LABEL
+//             let textNode = document.createTextNode(el.title);
+//             labelItem.classList.add("form-check-label");
+//             labelItem.setAttribute("for",`Checkbox${index}`)
+//             labelItem.appendChild(textNode);
+//             labelItem.setAttribute("data-name", `${el._id}`);
+
+//             if (el.isCompleted) {
+//                 labelItem.classList.add("crossed")
+//                 inputItem.setAttribute("checked", "true")
+//             }
+             
+//             // * ADDING BOOTSTRAP CLASSES TO THE LIST ITEM <LI> TAG
+//             listItem.classList.add("list-group-item")
+//             listItem.classList.add("my-list-item")
+
+//             listItem.appendChild(labelItem);
+//             todoList.appendChild(listItem);
+//         })
+// }
 
 
 async function getAllTodos(){
@@ -28,7 +77,7 @@ async function getAllTodos(){
         document.getElementById("todoCount").innerHTML = todoCount
         
         todos.data.forEach((el, index) => {
-       
+            
             let listItem = document.createElement("li");
             let labelItem = document.createElement("label");
             let inputItem = document.createElement("input");
@@ -74,6 +123,7 @@ async function getAllTodos(){
 }
 
 getAllTodos();
+
 
 fetch("/api/todos")
     .then(function(response){

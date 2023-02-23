@@ -20,6 +20,15 @@ module.exports.createTodo = async function(todo,callback){
         callback(err,null);
     }
 }
+module.exports.getCompletedTodos = async function(callback){
+    try{
+        var todos = await todoModel.find({isCompleted: false,isDeleted: false});
+        callback(null,todos);
+    }
+    catch(err){
+        callback(err,null);
+    }
+}
 module.exports.getAllTodos = async function(callback){
     try{
         var todos = await todoModel.find({isCompleted: false,isDeleted: false});
