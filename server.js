@@ -1,9 +1,18 @@
-require("dotenv").config();
-const userLib = require("./backend/lib/userLib");
-const todoLib = require("./backend/lib/todoLib");
-const mongoose = require("mongoose");
-const express = require('express');
-const { request } = require("express");
+// require("dotenv").config();
+// import dotenv from "dotenv"
+// dotenv.config();
+import {config} from "dotenv"
+config();
+// const userLib = require("./backend/lib/userLib");
+import * as userLib from "./backend/lib/userLib.js";
+// const todoLib = require("./backend/lib/todoLib");
+import * as todoLib from "./backend/lib/todoLib.js";
+// const mongoose = require("mongoose");
+import mongoose from "mongoose";
+// import { Express } from "express";
+import express,{request} from "express";
+// const express = require('express');
+// const { request } = require("express");
 const app = express();
 const port = process.env.PORT || 5010;
 const options = {
@@ -64,25 +73,25 @@ app.delete(("/api/todos/:todoid"),function(req,res){
 });
 
 app.get("/", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/index.html");
+	res.sendFile(process.cwd()+"/frontend/html/index.html");
 });
 
 app.get("/resume", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/resume.html");
+	res.sendFile(process.cwd()+"/frontend/html/resume.html");
 });
 
 app.get("/CodeTrack", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/CodeTrack.html");
+	res.sendFile(process.cwd()+"/frontend/html/CodeTrack.html");
 });
 
 app.get("/card", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/card.html");
+	res.sendFile(process.cwd()+"/frontend/html/card.html");
 });
 app.get("/weather", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/weather.html");
+	res.sendFile(process.cwd()+"/frontend/html/weather.html");
 });
 app.get("/todo", function(req, res){
-	res.sendFile(__dirname+"/frontend/html/todo.html");
+	res.sendFile(process.cwd()+"/frontend/html/todo.html");
 });
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_CONNECTION_STRING,{},function (err){
