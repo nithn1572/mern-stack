@@ -77,7 +77,7 @@ async function getAllDeletedTodos() {
         document.getElementById("deletedCount").innerHTML = deletedCount;
         deletedTodos.data.forEach((el, index) => {
             let listItem = document.createElement("li")
-            listItem.classList.add("list-group");
+            listItem.classList.add("list-group-item");
             let textNode = document.createTextNode(el.title);
             listItem.appendChild(textNode);
             listItem.classList.add("text-center")
