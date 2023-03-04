@@ -96,8 +96,11 @@ app.get("/", function(req, res){
 	res.sendFile(process.cwd()+"/frontend/html/index.html");
 });
 
-app.get("/resume", function(req, res){
+app.get("/resumepersonalra", function(req, res){
 	res.sendFile(process.cwd()+"/frontend/html/resume.html");
+});
+app.get("/resume", function(req, res){
+	res.sendFile(process.cwd()+"/frontend/html/index.html");
 });
 
 app.get("/CodeTrack", function(req, res){
