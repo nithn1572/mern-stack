@@ -89,10 +89,7 @@ app.delete("/api/todos/:todoid", function (req, res) {
 app.get("/", function (req, res) {
   res.sendFile(process.cwd() + "/frontend/html/index.html");
 });
-
-app.get("/resumepersonalra", function (req, res) {
-  res.sendFile(process.cwd() + "/frontend/html/resume.html");
-});
+//removed resume route
 app.get("/resume", function (req, res) {
   res.sendFile(process.cwd() + "/frontend/html/index.html");
 });
