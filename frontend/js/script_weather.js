@@ -6,7 +6,7 @@ const weatherApi = {
 function searchClick() {
   const searchSymbol = document.getElementById("searchBox");
   getWeatherReport(searchSymbol.value);
-  searchSymbol.value = "";
+  //   searchSymbol.value = "";
 }
 
 const searchBox = document.getElementById("searchBox");
@@ -14,7 +14,7 @@ const searchBox = document.getElementById("searchBox");
 searchBox.addEventListener("keypress", function (event) {
   if (event.keyCode === 13) {
     getWeatherReport(searchBox.value);
-    searchBox.value = "";
+    // searchBox.value = "";
     // changes value to null after clicking enter
   }
 });
