@@ -20,18 +20,18 @@
             <h1>what's the weather?</h1>
             <div id="inputBox" class="input-group mb-5 mt-5 ">
                 <input id="searchBox" type="text" class="form-control-lg" placeholder="Type a city name" aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-outline-success" type="button" id="button-addon2">
+                <button class="btn btn-outline-success" type="button" id="button-addon2" onclick="searchClick()">
                     <i class="fas fa-search fa-lg fa-fw"></i>
                 </button>
             </div>
             <div class="card weather-card" >
                 <div class="card-title text-center mt-3">
-                    <h4 id="city">Delhi</h4>
-                    <h6 id="currentDate">Fri Feb 17/2023</h6>
+                    <h4 id="city">City Name</h4>
+                    <h6 id="currentDate">Current Date</h6>
                 </div>
                 <img id="cardImage" src="images/clear.jpg" class="card-img-top" alt="Weather-Img">
                 <div class="card-body">
-                    <h6 id="temp" class="display-4 font-weight-bold text-center">13°C</h6>
+                    <h6 id="temp" class="display-4 font-weight-bold text-center">Temparature</h6>
                     <h6 id="feelLike" class="display-6 font-weight-bold text-center">(Feels Like 13°C)</h6>
                     <h6 id="weather" class="display-7 text-center">Haze</h6>
                     <h5 id="minMaxTemp" class="text-center">25°C (min)/ 26°C(max)</h5>
