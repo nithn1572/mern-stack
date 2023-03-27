@@ -91,11 +91,14 @@ app.get("/", function (req, res) {
 });
 //removed resume route
 app.get("/resume", function (req, res) {
-  res.sendFile(process.cwd() + "/frontend/html/index.html");
+  res.sendFile(process.cwd() + "/frontend/html/resume.html");
 });
 
 app.get("/CodeTrack", function (req, res) {
   res.sendFile(process.cwd() + "/frontend/html/CodeTrack.html");
+});
+app.get("/cf", function (req, res) {
+  res.sendFile(process.cwd() + "/frontend/html/cf.html");
 });
 
 app.get("/card", function (req, res) {

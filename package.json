@@ -1,6 +1,6 @@
 {
   "name": "mern-web-dev",
-  "type":"module",
+  "type": "module",
   "version": "1.0.0",
   "description": "My first web project",
   "main": "server.js",
@@ -12,6 +12,7 @@
   "dependencies": {
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^6.9.1"
+    "mongoose": "^6.9.1",
+    "puppeteer": "^19.7.5"
   }
 }

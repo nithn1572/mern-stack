@@ -6,7 +6,6 @@ const weatherApi = {
 function searchClick() {
   const searchSymbol = document.getElementById("searchBox");
   getWeatherReport(searchSymbol.value);
-  //   searchSymbol.value = "";
 }
 
 const searchBox = document.getElementById("searchBox");
