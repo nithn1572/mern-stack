@@ -14,7 +14,7 @@ searchBox.addEventListener("keypress", function (event) {
   if (event.keyCode === 13) {
     getWeatherReport(searchBox.value);
     // searchBox.value = "";
-    // changes value to null after clicking enter
+    // changes value to null after clicking enter-
   }
 });
 
